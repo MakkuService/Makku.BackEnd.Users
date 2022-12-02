@@ -16,11 +16,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from . import views as views_makku
 
 urlpatterns = [
+    path("", views_makku.index),
     path("admin/", admin.site.urls),
     path("animal/", include('animals.urls')),
     path("shelter/", include('shelters.urls')),
-    path("user/", include('users.urls')),
+    path('users/', include('users.urls')),
 
 ]
