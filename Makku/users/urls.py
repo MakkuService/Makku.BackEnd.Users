@@ -1,7 +1,8 @@
-from django.urls import path
+from django.urls import path, include
 from . import views as views_user
 
 urlpatterns = [
-    path('registration_form', views_user.registration_form_user),
-    path('card/<str:user_id>', views_user.user_card, name='user-name'),
+    path('accounts/', include('django.contrib.auth.urls')),
+#    path('card/<str:user_id>', views_user.user_card, name='user-name'),
+
 ]
