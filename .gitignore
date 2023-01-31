@@ -1,0 +1,5 @@
+# created by virtualenv automatically
+
+venv/
+__pycash__/
+flask_session/
